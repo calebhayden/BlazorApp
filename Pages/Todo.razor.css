@@ -1,0 +1,13 @@
+.header {
+  text-align: center;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentItem {
+    margin-top: 10px;
+  justify-content: center;
+}

@@ -1,0 +1,53 @@
+﻿@page "/retro"
+<div class="header">
+    <h1>Caleb's Crazy Cool Retro Board for Winners</h1>
+    <h4>Good Items: @retros.Count(retros => !retros.IsDone) | Bad Items: @retros.Count(retros => retros.IsDone) </h4>
+</div>
+
+<div class="row">
+  <div class="column">
+<div class="input">
+    <input placeholder="What went well?" @bind="newRetroItem" />
+    <button class="btn btn-primary" @onclick="AddRetro">Add To-Do</button>
+</div>      
+  </div>
+  <div class="column"></div>
+</div>
+
+<div class="input">
+    <input placeholder="What didn't go well" @bind="newRetroItem" />
+    <button class="btn btn-primary" @onclick="AddRetro">Add Item</button>
+</div>
+
+
+<ul class="contentContainer">
+    @foreach (var r in retros)
+    {
+        <li class="contentItem">
+            <input type="checkbox" @bind='r.IsDone' />
+            <input @bind="r.Title" />
+            <button class="btn btn-danger" @onclick="() => RemoveRetro(r)">Delete</button>
+        </li>
+    }
+</ul>
+
+
+
+@code {
+    private string newRetroItem;
+    private List<RetroItem> retros = new();
+
+    private void AddRetro()
+    {
+        if (!string.IsNullOrWhiteSpace(newRetroItem))
+        {
+            retros.Add(new RetroItem { Title = newRetroItem });
+            newRetroItem = string.Empty;
+        }
+    }
+
+    private void RemoveRetro(RetroItem retro)
+    {
+        retros.Remove(retro);
+    }
+}

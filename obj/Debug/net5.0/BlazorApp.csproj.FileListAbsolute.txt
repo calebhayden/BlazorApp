@@ -56,6 +56,6 @@ C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\ref\BlazorApp.dll
 C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\BlazorApp.pdb
 C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\BlazorApp.genruntimeconfig.cache
 C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\BlazorApp.csproj.CopyComplete
-C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Todo.razor.g.cs
-C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Todo.razor.g.cs
-C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\scopedcss\Pages\Todo.razor.rz.scp.css
+C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Retro.razor.g.cs
+C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Retro.razor.g.cs
+C:\Users\chayden\Source\Repos\BlazorApp\obj\Debug\net5.0\scopedcss\Pages\Retro.razor.rz.scp.css

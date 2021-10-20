@@ -1,53 +1,72 @@
 ﻿@page "/retro"
-<div class="header">
+<div>
     <h1>Caleb's Crazy Cool Retro Board for Winners</h1>
-    <h4>Good Items: @retros.Count(retros => !retros.IsDone) | Bad Items: @retros.Count(retros => retros.IsDone) </h4>
+    <h4>Good Items: @goodRetros.Count() | Bad Items: @badRetros.Count() </h4>
 </div>
 
-<div class="row">
-  <div class="column">
-<div class="input">
-    <input placeholder="What went well?" @bind="newRetroItem" />
-    <button class="btn btn-primary" @onclick="AddRetro">Add To-Do</button>
-</div>      
-  </div>
-  <div class="column"></div>
+    <div class="grid-container">
+        <div class="grid-column">
+            @foreach (var r in goodRetros)
+            {
+                <p class="grid-item">
+                <p>@r.Title</p>
+                <button class="btn btn-danger" @onclick="() => RemoveRetro(r, goodRetros)">Delete</button>
+                </p>
+
+            }
+        </div>
+
+
+        <div class="grid-column">
+            @foreach (var r in badRetros)
+            {
+                <p class="grid-item">
+                <p>@r.Title</p>
+                <button class="btn btn-danger" @onclick="() => RemoveRetro(r, badRetros)">Delete</button>
+                </p>
+            }
+        </div>
+
+
 </div>
-
-<div class="input">
-    <input placeholder="What didn't go well" @bind="newRetroItem" />
-    <button class="btn btn-primary" @onclick="AddRetro">Add Item</button>
+<div>
+    <input placeholder="What went well?" @bind="newGoodEntry" />
+    <button class="btn btn-primary" @onclick="AddGoodRetro">Add</button>
 </div>
+<div></div>
 
-
-<ul class="contentContainer">
-    @foreach (var r in retros)
-    {
-        <li class="contentItem">
-            <input type="checkbox" @bind='r.IsDone' />
-            <input @bind="r.Title" />
-            <button class="btn btn-danger" @onclick="() => RemoveRetro(r)">Delete</button>
-        </li>
-    }
-</ul>
-
-
+<div>
+    <div>
+        <input placeholder="What didn't go well?" @bind="newBadEntry" />
+        <button class="btn btn-primary" @onclick="AddBadRetro">Add</button>
+    </div>
+</div>
 
 @code {
-    private string newRetroItem;
-    private List<RetroItem> retros = new();
+    private string newGoodEntry;
+    private string newBadEntry;
+    private List<RetroItem> goodRetros = new();
+    private List<RetroItem> badRetros = new();
 
-    private void AddRetro()
+    private void AddGoodRetro()
     {
-        if (!string.IsNullOrWhiteSpace(newRetroItem))
+        if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            retros.Add(new RetroItem { Title = newRetroItem });
-            newRetroItem = string.Empty;
+            goodRetros.Add(new RetroItem { Title = newGoodEntry, IsGood = true });
+            newGoodEntry = string.Empty;
         }
     }
 
-    private void RemoveRetro(RetroItem retro)
+    private void AddBadRetro()
     {
-        retros.Remove(retro);
+        if (!string.IsNullOrWhiteSpace(newBadEntry))
+        {
+            badRetros.Add(new RetroItem { Title = newBadEntry, IsGood = false });
+            newBadEntry = string.Empty;
+        }
+    }
+    private void RemoveRetro(RetroItem retro, List<RetroItem> whichList)
+    {
+        whichList.Remove(retro);
     }
 }

@@ -82,8 +82,8 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/todo")]
-    public partial class Todo : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/retro")]
+    public partial class Retro : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,23 +91,33 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\chayden\Source\Repos\BlazorApp\Pages\Todo.razor"
+#line 49 "C:\Users\chayden\Source\Repos\BlazorApp\Pages\Retro.razor"
        
-    private string newTodo;
-    private List<TodoItem> todos = new();
+    private string newGoodEntry;
+    private string newBadEntry;
+    private List<RetroItem> goodRetros = new();
+    private List<RetroItem> badRetros = new();
 
-    private void AddTodo()
+    private void AddGoodRetro()
     {
-        if (!string.IsNullOrWhiteSpace(newTodo))
+        if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            todos.Add(new TodoItem { Title = newTodo });
-            newTodo = string.Empty;
+            goodRetros.Add(new RetroItem { Title = newGoodEntry, IsGood = true });
+            newGoodEntry = string.Empty;
         }
     }
 
-    private void RemoveTodo(TodoItem todo)
+    private void AddBadRetro()
     {
-        todos.Remove(todo);
+        if (!string.IsNullOrWhiteSpace(newBadEntry))
+        {
+            badRetros.Add(new RetroItem { Title = newBadEntry, IsGood = false });
+            newBadEntry = string.Empty;
+        }
+    }
+    private void RemoveRetro(RetroItem retro, List<RetroItem> whichList)
+    {
+        whichList.Remove(retro);
     }
 
 #line default

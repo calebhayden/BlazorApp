@@ -49,6 +49,11 @@
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
+.icon-primary[b-7cxxmz0cwl] {
+    max-width: 20px;
+    max-height: 20px;
+    fill: white;
+}
 
 @media (min-width: 641px) {
     .navbar-toggler[b-7cxxmz0cwl] {

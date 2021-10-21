@@ -1,25 +1,37 @@
 /* _content/BlazorApp/Pages/Retro.razor.rz.scp.css */
+
 .grid-container[b-izbxyagb1f] {
   display: grid;
   grid-column-gap: 50px;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgba(31, 137, 223, 0.65);
+
   padding: 10px;
 }
 
 .grid-column[b-izbxyagb1f] {
-  display:grid;
+/* placeholder */
 }
 
 .grid-item[b-izbxyagb1f] {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid hsla(0, 1%, 58%, 0.787);
+  display: grid;
+  grid-template-columns: [col1-start] 40px [col2-start] 50px [col3-start] auto [col4-start] 50px [col5-start] 40px [col-end];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row-end];
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.8);
+  border: 1px solid rgba(240, 248, 255, 0.6);
   padding: 20px;
   font-size: 20px;
   text-align: center;
-  box-shadow:  1px 2px 0 rgb(0 0 0 / 2%), 0 2px 3px 0 rgb(0 0 0 / 2%), 0 2px 7px 0 rgb(0 0 0 / 4%);
-  max-height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: fit-content;
+}
 
+.grid-item-buttonArea[b-izbxyagb1f] {
+  grid-area: row1-start / col5-start / row2-start / col-end ; 
+}
+
+.grid-item-textArea[b-izbxyagb1f] {
+  grid-area: row2-start / col2-start / row3-start / col5-start ; 
 }
 /* _content/BlazorApp/Shared/MainLayout.razor.rz.scp.css */
 .page[b-3dsd3z3yec] {

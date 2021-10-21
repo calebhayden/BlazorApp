@@ -4,44 +4,38 @@
     <h4>Good Items: @goodRetros.Count() | Bad Items: @badRetros.Count() </h4>
 </div>
 
-    <div class="grid-container">
-        <div class="grid-column">
-            @foreach (var r in goodRetros)
-            {
-                <p class="grid-item">
-                <p>@r.Title</p>
-                <button class="btn btn-danger" @onclick="() => RemoveRetro(r, goodRetros)">Delete</button>
-                </p>
-
-            }
+<div class="grid-container">
+    <div class="grid-column">
+        <div>
+            <input placeholder="What went well?" @bind="newGoodEntry" />
+            <button class="btn btn-primary" @onclick="AddGoodRetro">Add</button>
         </div>
+        @foreach (var r in goodRetros)
+        {
+            <p class="grid-item">
+            <p class="grid-item-textArea">@r.Text</p>
+            <button class="btn btn-danger grid-item-buttonArea" @onclick="() => RemoveRetro(r, goodRetros)">x</button>
+            </p>
+        }
+    </div>
 
 
-        <div class="grid-column">
-            @foreach (var r in badRetros)
-            {
-                <p class="grid-item">
-                <p>@r.Title</p>
-                <button class="btn btn-danger" @onclick="() => RemoveRetro(r, badRetros)">Delete</button>
-                </p>
-            }
+    <div class="grid-column">
+        <div>
+            <div>
+                <input placeholder="What didn't go well?" @bind="newBadEntry" />
+                <button class="btn btn-primary" @onclick="AddBadRetro">Add</button>
+            </div>
         </div>
-
-
-</div>
-<div>
-    <input placeholder="What went well?" @bind="newGoodEntry" />
-    <button class="btn btn-primary" @onclick="AddGoodRetro">Add</button>
-</div>
-<div></div>
-
-<div>
-    <div>
-        <input placeholder="What didn't go well?" @bind="newBadEntry" />
-        <button class="btn btn-primary" @onclick="AddBadRetro">Add</button>
+        @foreach (var r in badRetros)
+        {
+            <p class="grid-item">
+            <p class="grid-item-textArea">@r.Text</p>
+            <button class="btn btn-danger grid-item-buttonArea" @onclick="() => RemoveRetro(r, badRetros)">x</button>
+            </p>
+        }
     </div>
 </div>
-
 @code {
     private string newGoodEntry;
     private string newBadEntry;
@@ -52,7 +46,7 @@
     {
         if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            goodRetros.Add(new RetroItem { Title = newGoodEntry, IsGood = true });
+            goodRetros.Add(new RetroItem { Text = newGoodEntry, IsGood = true });
             newGoodEntry = string.Empty;
         }
     }
@@ -61,7 +55,7 @@
     {
         if (!string.IsNullOrWhiteSpace(newBadEntry))
         {
-            badRetros.Add(new RetroItem { Title = newBadEntry, IsGood = false });
+            badRetros.Add(new RetroItem { Text = newBadEntry, IsGood = false });
             newBadEntry = string.Empty;
         }
     }

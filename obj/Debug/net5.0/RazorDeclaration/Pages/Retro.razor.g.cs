@@ -91,7 +91,7 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\Admin\Source\Repos\BlazorApp\Pages\Retro.razor"
+#line 39 "C:\Users\Admin\Source\Repos\BlazorApp\Pages\Retro.razor"
        
     private string newGoodEntry;
     private string newBadEntry;
@@ -102,7 +102,7 @@ using BlazorApp.Shared;
     {
         if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            goodRetros.Add(new RetroItem { Title = newGoodEntry, IsGood = true });
+            goodRetros.Add(new RetroItem { Text = newGoodEntry, IsGood = true });
             newGoodEntry = string.Empty;
         }
     }
@@ -111,7 +111,7 @@ using BlazorApp.Shared;
     {
         if (!string.IsNullOrWhiteSpace(newBadEntry))
         {
-            badRetros.Add(new RetroItem { Title = newBadEntry, IsGood = false });
+            badRetros.Add(new RetroItem { Text = newBadEntry, IsGood = false });
             newBadEntry = string.Empty;
         }
     }

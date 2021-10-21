@@ -111,39 +111,6 @@
         }
       },
       {
-        "HashCode": -980111629,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Retro.Retro",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Retro"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Retro.Retro"
-        }
-      },
-      {
-        "HashCode": -278301604,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Retro.Retro",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Pages.Retro.Retro"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Retro.Retro",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -918525483,
         "Kind": "Components.Component",
         "Name": "BlazorApp.Pages.Retro.RetroColumn",

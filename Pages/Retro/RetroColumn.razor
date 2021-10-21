@@ -1,0 +1,44 @@
+<div class="grid-column">
+    <div>
+        <input placeholder="Add a comment!" @bind="newEntry" />
+        <button class="btn btn-primary" @onclick="Add_Click">Add</button>
+    </div>
+    @foreach (var r in inputRetros)
+    {
+        <p class="grid-item">
+        <p class="grid-item-textArea">@r.Text</p>
+        <svg class="icon-primary grid-item-buttonArea" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+        <path
+            d="M497.941 273.941c18.745-18.745 18.745-49.137 0-67.882l-160-160c-18.745-18.745-49.136-18.746-67.883 0l-256 256c-18.745 18.745-18.745 49.137 0 67.882l96 96A48.004 48.004 0 0 0 144 480h356c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12H355.883l142.058-142.059zm-302.627-62.627l137.373 137.373L265.373 416H150.628l-80-80 124.686-124.686z"
+            @onclick="() => Delete_Click(new RemoveRetroPayload {ItemId = r.Id, TargetList = inputRetros })" />
+        </svg>
+        </p>
+    }
+</div>
+
+@code {
+    public string newEntry;
+
+    [Parameter]
+    public List<RetroItem> inputRetros { get; set; }
+
+    [Parameter]
+    public EventCallback<RemoveRetroPayload> onDeleteClicked { get; set; }
+
+    [Parameter]
+    public EventCallback<string> onAddClicked { get; set; }
+
+
+    private async Task Add_Click()
+    {
+        await onAddClicked.InvokeAsync(newEntry);
+        newEntry = string.Empty;
+    }
+
+    private async Task Delete_Click(RemoveRetroPayload retroToDelete)
+    {
+        Console.WriteLine("My debug output.");
+        await onDeleteClicked.InvokeAsync(retroToDelete);
+    }
+}

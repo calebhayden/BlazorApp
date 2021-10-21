@@ -1,0 +1,52 @@
+﻿@page "/retro"
+<div class="header">
+    <h1>Caleb's Crazy Cool Retro Board for Winners</h1>
+    <h4>Good Items: @goodRetros.Count() | Bad Items: @badRetros.Count() | Action Items: @actionItems.Count() </h4>
+</div>
+
+<div class="grid-container">
+<RetroColumn inputRetros="goodRetros" onAddClicked="AddGoodRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
+<RetroColumn inputRetros="badRetros" onAddClicked="AddBadRetro"></RetroColumn>
+<RetroColumn inputRetros="actionItems" onAddClicked="AddActionItem"></RetroColumn>
+</div>
+
+@code {
+
+    private List<RetroItem> goodRetros = new();
+    private List<RetroItem> badRetros = new();
+    private List<RetroItem> actionItems = new();
+        //Todo: Add and remove items by Id
+    private void AddGoodRetro(string newGoodEntry)
+    {
+        if (!string.IsNullOrWhiteSpace(newGoodEntry))
+        {
+            goodRetros.Add(new RetroItem { Text = newGoodEntry });
+            newGoodEntry = string.Empty;
+        }
+    }
+
+    private void AddBadRetro(string newBadEntry)
+    {
+        if (!string.IsNullOrWhiteSpace(newBadEntry))
+        {
+            badRetros.Add(new RetroItem { Text = newBadEntry });
+            newBadEntry = string.Empty;
+        }
+    }
+
+    private void AddActionItem(string newActionEntry)
+    {
+        if (!string.IsNullOrWhiteSpace(newActionEntry))
+        {
+            actionItems.Add(new RetroItem { Text = newActionEntry });
+            newActionEntry = string.Empty;
+        }
+    }
+
+//Todo: find source list and modify it
+    private void RemoveRetro(RemoveRetroPayload retroToRemove)
+    {
+        Console.WriteLine("removeRetro");
+        retroToRemove.TargetList.RemoveAll(item => item.Id == retroToRemove.ItemId);
+    }
+}

@@ -91,18 +91,20 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\Admin\Source\Repos\BlazorApp\Pages\Retro.razor"
+#line 61 "C:\Users\Admin\Source\Repos\BlazorApp\Pages\Retro.razor"
        
     private string newGoodEntry;
     private string newBadEntry;
+    private string newActionEntry;
     private List<RetroItem> goodRetros = new();
     private List<RetroItem> badRetros = new();
+    private List<RetroItem> actionItems = new();
 
     private void AddGoodRetro()
     {
         if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            goodRetros.Add(new RetroItem { Text = newGoodEntry, IsGood = true });
+            goodRetros.Add(new RetroItem { Text = newGoodEntry });
             newGoodEntry = string.Empty;
         }
     }
@@ -111,10 +113,20 @@ using BlazorApp.Shared;
     {
         if (!string.IsNullOrWhiteSpace(newBadEntry))
         {
-            badRetros.Add(new RetroItem { Text = newBadEntry, IsGood = false });
+            badRetros.Add(new RetroItem { Text = newBadEntry });
             newBadEntry = string.Empty;
         }
     }
+
+    private void AddActionItemRetro()
+    {
+        if (!string.IsNullOrWhiteSpace(newActionEntry))
+        {
+            actionItems.Add(new RetroItem { Text = newActionEntry });
+            newActionEntry = string.Empty;
+        }
+    }
+
     private void RemoveRetro(RetroItem retro, List<RetroItem> whichList)
     {
         whichList.Remove(retro);

@@ -1,4 +1,6 @@
 ﻿@page "/retro"
+
+
 <div class="header">
     <h1>Caleb's Crazy Cool Retro Board for Winners</h1>
     <h4>Good Items: @goodRetros.Count() | Bad Items: @badRetros.Count() | Action Items: @actionItems.Count() </h4>
@@ -6,8 +8,8 @@
 
 <div class="grid-container">
 <RetroColumn inputRetros="goodRetros" onAddClicked="AddGoodRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
-<RetroColumn inputRetros="badRetros" onAddClicked="AddBadRetro"></RetroColumn>
-<RetroColumn inputRetros="actionItems" onAddClicked="AddActionItem"></RetroColumn>
+<RetroColumn inputRetros="badRetros" onAddClicked="AddBadRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
+<RetroColumn inputRetros="actionItems" onAddClicked="AddActionItem" onDeleteClicked="RemoveRetro"></RetroColumn>
 </div>
 
 @code {
@@ -15,12 +17,13 @@
     private List<RetroItem> goodRetros = new();
     private List<RetroItem> badRetros = new();
     private List<RetroItem> actionItems = new();
-        //Todo: Add and remove items by Id
+    //Todo: Add and remove items by Id
     private void AddGoodRetro(string newGoodEntry)
     {
         if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-            goodRetros.Add(new RetroItem { Text = newGoodEntry });
+
+            goodRetros.Add(new RetroItem { Text = newGoodEntry, Id = goodRetros.Count() + 1, Author = "Anonymous" });
             newGoodEntry = string.Empty;
         }
     }
@@ -38,15 +41,15 @@
     {
         if (!string.IsNullOrWhiteSpace(newActionEntry))
         {
-            actionItems.Add(new RetroItem { Text = newActionEntry });
+            actionItems.Add(new RetroItem { Text = newActionEntry, Author = "Anonymous"});
             newActionEntry = string.Empty;
         }
     }
 
-//Todo: find source list and modify it
+    //Todo: find source list and modify it
     private void RemoveRetro(RemoveRetroPayload retroToRemove)
     {
-        Console.WriteLine("removeRetro");
+        Console.WriteLine("Delete method invoked");
         retroToRemove.TargetList.RemoveAll(item => item.Id == retroToRemove.ItemId);
     }
 }

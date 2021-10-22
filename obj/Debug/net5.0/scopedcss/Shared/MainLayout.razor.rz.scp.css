@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: rgb(240 240 240);
 }
 
 .main[b-3dsd3z3yec] {
@@ -9,7 +10,7 @@
 }
 
 .sidebar[b-3dsd3z3yec] {
-    background-image: linear-gradient(180deg, #3494E6 0%, #EC6EAD 70%);
+    background-image: linear-gradient(180deg, #7b4397 30%, #dc2430 90%);
 }
 
 .top-row[b-3dsd3z3yec] {

@@ -4,8 +4,14 @@
 }
 
 .input-area {
-  text-align: center;
-  margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-container{
+    width:10%;
+    margin: 10px;
 }
 
 .textbox {
@@ -52,8 +58,11 @@
 }
 
 .grid-item-iconArea {
-    grid-area:row3-start/col1-start/ row-end / col-end;
-    justify-items: end
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: row3-start/col3-start/ row-end / col4-start;
+    justify-items: center;
 }
 
 .icon-primary {

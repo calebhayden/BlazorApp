@@ -38,12 +38,6 @@
     padding-bottom: 5px;
 }
 
-.grid-container[b-fcinay273c] {
-  display: grid;
-  grid-column-gap: 50px;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 10px;
-}
 
 .grid-column[b-fcinay273c] {
     margin-top: 10px;
@@ -80,7 +74,7 @@
 .grid-item-iconArea[b-fcinay273c] {
     display: grid;
     grid-column-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-area: row3-start/col3-start/ row-end / col4-start;
     justify-items: center;
 }
@@ -99,6 +93,10 @@
     max-height: 20px;
     cursor: pointer;
     justify-content: end;
+}
+
+.icon-justify-right[b-fcinay273c] {
+    justify-content: right;
 }
 /* _content/BlazorApp/Shared/MainLayout.razor.rz.scp.css */
 .page[b-3dsd3z3yec] {

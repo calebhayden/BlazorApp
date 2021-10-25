@@ -1,4 +1,6 @@
 ﻿@page "/retro"
+@using BlazorApp.Data
+@inject RetroBoardService RetroBoardService
 
 
 <div class="header">
@@ -7,9 +9,9 @@
 </div>
 
 <div class="grid-container">
-<RetroColumn inputRetros="goodRetros" onAddClicked="AddGoodRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
-<RetroColumn inputRetros="badRetros" onAddClicked="AddBadRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
-<RetroColumn inputRetros="actionItems" onAddClicked="AddActionItem" onDeleteClicked="RemoveRetro"></RetroColumn>
+    <RetroColumn inputRetros="goodRetros" onAddClicked="AddGoodRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
+    <RetroColumn inputRetros="badRetros" onAddClicked="AddBadRetro" onDeleteClicked="RemoveRetro"></RetroColumn>
+    <RetroColumn inputRetros="actionItems" onAddClicked="AddActionItem" onDeleteClicked="RemoveRetro"></RetroColumn>
 </div>
 
 @code {
@@ -17,6 +19,14 @@
     private List<RetroItem> goodRetros = new();
     private List<RetroItem> badRetros = new();
     private List<RetroItem> actionItems = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        goodRetros = await RetroBoardService.GetRetroBoardAsync();
+        badRetros = await RetroBoardService.GetRetroBoardAsync();
+        actionItems = await RetroBoardService.GetRetroBoardAsync();
+    }
+
     //Todo: Add and remove items by Id
     private void AddGoodRetro(string newGoodEntry)
     {
@@ -41,7 +51,7 @@
     {
         if (!string.IsNullOrWhiteSpace(newActionEntry))
         {
-            actionItems.Add(new RetroItem { Text = newActionEntry, Author = "Anonymous"});
+            actionItems.Add(new RetroItem { Text = newActionEntry, Author = "Anonymous" });
             newActionEntry = string.Empty;
         }
     }
@@ -52,4 +62,6 @@
         Console.WriteLine("Delete method invoked");
         retroToRemove.TargetList.RemoveAll(item => item.Id == retroToRemove.ItemId);
     }
+
+
 }

@@ -1,8 +1,10 @@
+
 <div class="grid-column">
     <div class="input-area">
         <input class="textbox" placeholder="Add a comment!" @bind="newEntry" />
         <button class="btn btn-primary" @onclick="Add_Click">Add</button>
     </div>
+
     @foreach (var r in inputRetros)
     {
         <p class="grid-item">
@@ -11,9 +13,11 @@
             <img class="icon-primary" src="../Icons/trash.svg" @onclick="() => Delete_Click(new RemoveRetroPayload {ItemId = r.Id, TargetList = inputRetros })" />
         </div>
         <div class="grid-item-iconArea">
+            <p></p>
             <img class="icon-secondary" src="@r.LikeImgSrc" @onclick="() => { Like_Click(r); Click_Debug(); }" />
             <img class="icon-secondary" src="@r.DislikeImgSrc" @onclick="() => { Dislike_Click(r); Click_Debug(); }" />
-            <img class="icon-secondary" src="@r.StarImgSrc"@onclick="() => { Star_Click(r); Click_Debug(); }" />
+            <img class="icon-secondary" src="@r.StarImgSrc" @onclick="() => { Star_Click(r); Click_Debug(); }" />
+            <p></p>
         </div>
         </p>
     }
@@ -55,16 +59,16 @@
     private void Like_Click(RetroItem r)
     {
         r.IsLiked = !r.IsLiked;
-        
+
     }
     private void Dislike_Click(RetroItem r)
     {
         r.IsDisliked = !r.IsDisliked;
-        
+
     }
     private void Star_Click(RetroItem r)
     {
         r.IsStarred = !r.IsStarred;
-        
+
     }
 }

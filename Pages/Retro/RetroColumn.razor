@@ -1,33 +1,35 @@
+@using BlazorApp.Data
 
 <div class="grid-column">
+    <div class="column-header">@inputRetros.Header</div>
     <div class="input-area">
-        <input class="textbox" placeholder="Add a comment!" @bind="newEntry" />
+        <input class="textbox" placeholder="@inputRetros.HelperText" @bind="newEntry" />
         <button class="btn btn-primary" @onclick="Add_Click">Add</button>
     </div>
 
-    @foreach (var r in inputRetros)
-    {
+    @foreach (var r in inputRetros.Items)
+     {
         <p class="grid-item">
         <p class="grid-item-textArea">@r.Text</p>
         <div class="grid-item-buttonArea">
-            <img class="icon-primary" src="../Icons/trash.svg" @onclick="() => Delete_Click(new RemoveRetroPayload {ItemId = r.Id, TargetList = inputRetros })" />
+            <img class="icon-primary" src="../Icons/trash.svg" @onclick="() => Delete_Click(new RemoveRetroPayload {ItemId = r.Id, TargetList = inputRetros.Items })" />
         </div>
         <div class="grid-item-iconArea">
             <p></p>
-            <img class="icon-secondary" src="@r.LikeImgSrc" @onclick="() => { Like_Click(r); Click_Debug(); }" />
-            <img class="icon-secondary" src="@r.DislikeImgSrc" @onclick="() => { Dislike_Click(r); Click_Debug(); }" />
+            <img class="icon-secondary" src="@r.LikeImgSrc" @onclick="() => Like_Click(r)" />
+            <img class="icon-secondary" src="@r.DislikeImgSrc" @onclick="() => Dislike_Click(r)" />
             <img class="icon-secondary" src="@r.StarImgSrc" @onclick="() => { Star_Click(r); Click_Debug(); }" />
             <p></p>
         </div>
         </p>
-    }
+     }
 </div>
 
 @code {
     public string newEntry;
 
     [Parameter]
-    public List<RetroItem> inputRetros { get; set; }
+    public RetroItemCollection inputRetros { get; set; }
 
     [Parameter]
     public EventCallback<RemoveRetroPayload> onDeleteClicked { get; set; }
@@ -59,16 +61,13 @@
     private void Like_Click(RetroItem r)
     {
         r.IsLiked = !r.IsLiked;
-
     }
     private void Dislike_Click(RetroItem r)
     {
         r.IsDisliked = !r.IsDisliked;
-
     }
     private void Star_Click(RetroItem r)
     {
         r.IsStarred = !r.IsStarred;
-
     }
 }

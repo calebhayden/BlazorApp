@@ -97,7 +97,7 @@ using BlazorApp.Pages.Retro;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Admin\Source\Repos\BlazorApp\Shared\NavMenu.razor"
+#line 39 "C:\Users\Admin\Source\Repos\BlazorApp\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

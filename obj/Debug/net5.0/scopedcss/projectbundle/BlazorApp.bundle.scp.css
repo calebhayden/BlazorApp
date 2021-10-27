@@ -18,9 +18,11 @@
 /* placeholder */
 }
 /* _content/BlazorApp/Pages/Retro/RetroColumn.razor.rz.scp.css */
-.header[b-fcinay273c]{
+.column-header[b-fcinay273c]{
   font: fira-code;
   text-align: center;
+  font-weight:bold;
+  margin-top: 5px;
 }
 
 .input-area[b-fcinay273c] {

@@ -33,8 +33,9 @@ namespace BlazorApp.Data
             var rng = new Random();
             return Task.FromResult(Enumerable.Range(1, rng.Next(5)).Select(index => new RetroItem
             {
-                Text = Ipsum[rng.Next(Ipsum.Length)]
-            }).ToList());
+                Text = Ipsum[rng.Next(Ipsum.Length)],
+                Id = index
+            }).ToList()) ;
         }
     }
 }

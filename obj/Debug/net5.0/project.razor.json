@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\BlazorApp.csproj",
+  "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\BlazorApp.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -11,6 +11,146 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "HashCode": -980111629,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Retro.Retro",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Retro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Retro.Retro"
+        }
+      },
+      {
+        "HashCode": -278301604,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Retro.Retro",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.Retro.Retro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Retro.Retro",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 469782226,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Retro.RetroColumn",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RetroColumn"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "inputRetros",
+            "TypeName": "System.Collections.Generic.List<RetroItem>",
+            "Metadata": {
+              "Common.PropertyName": "inputRetros"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onDeleteClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RemoveRetroPayload>",
+            "Metadata": {
+              "Common.PropertyName": "onDeleteClicked",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onLikeClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RetroItem>",
+            "Metadata": {
+              "Common.PropertyName": "onLikeClicked",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onAddClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "onAddClicked",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Retro.RetroColumn"
+        }
+      },
+      {
+        "HashCode": 787342716,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Retro.RetroColumn",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.Retro.RetroColumn"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "inputRetros",
+            "TypeName": "System.Collections.Generic.List<RetroItem>",
+            "Metadata": {
+              "Common.PropertyName": "inputRetros"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onDeleteClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RemoveRetroPayload>",
+            "Metadata": {
+              "Common.PropertyName": "onDeleteClicked",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onLikeClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RetroItem>",
+            "Metadata": {
+              "Common.PropertyName": "onLikeClicked",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "onAddClicked",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "onAddClicked",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Retro.RetroColumn",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "HashCode": 60435455,
         "Kind": "Components.Component",
@@ -111,91 +251,68 @@
         }
       },
       {
-        "HashCode": -918525483,
+        "HashCode": 2041230014,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Retro.RetroColumn",
+        "Name": "BlazorApp.Pages.Locked",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "RetroColumn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "inputRetros",
-            "TypeName": "System.Collections.Generic.List<RetroItem>",
-            "Metadata": {
-              "Common.PropertyName": "inputRetros"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "onDeleteClicked",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RemoveRetroPayload>",
-            "Metadata": {
-              "Common.PropertyName": "onDeleteClicked",
-              "Components.EventCallback": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "onAddClicked",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "onAddClicked",
-              "Components.EventCallback": "True"
-            }
+            "TagName": "Locked"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Retro.RetroColumn"
+          "Common.TypeName": "BlazorApp.Pages.Locked"
         }
       },
       {
-        "HashCode": 1907131005,
+        "HashCode": 49217460,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Retro.RetroColumn",
+        "Name": "BlazorApp.Pages.Locked",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorApp.Pages.Retro.RetroColumn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "inputRetros",
-            "TypeName": "System.Collections.Generic.List<RetroItem>",
-            "Metadata": {
-              "Common.PropertyName": "inputRetros"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "onDeleteClicked",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<RemoveRetroPayload>",
-            "Metadata": {
-              "Common.PropertyName": "onDeleteClicked",
-              "Components.EventCallback": "True"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "onAddClicked",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "onAddClicked",
-              "Components.EventCallback": "True"
-            }
+            "TagName": "BlazorApp.Pages.Locked"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Retro.RetroColumn",
+          "Common.TypeName": "BlazorApp.Pages.Locked",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1833272418,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Unauthorized",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Unauthorized"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Unauthorized"
+        }
+      },
+      {
+        "HashCode": 1002157954,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Unauthorized",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.Unauthorized"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Unauthorized",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16022,63 +16139,73 @@
   "RootNamespace": "BlazorApp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\App.razor",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\App.razor",
       "TargetPath": "App.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\Retro\\RetroColumn.razor",
-      "TargetPath": "Pages\\Retro\\RetroColumn.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\Error.cshtml",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\Counter.razor",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\Retro\\Retro.razor",
-      "TargetPath": "Pages\\Retro\\Retro.razor",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\_Host.cshtml",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Locked.razor",
+      "TargetPath": "Pages\\Locked.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Unauthorized.razor",
+      "TargetPath": "Pages\\Unauthorized.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\chayden\\Source\\Repos\\BlazorApp\\Pages\\Index.razor",
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Retro\\RetroColumn.razor",
+      "TargetPath": "Pages\\Retro\\RetroColumn.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Pages\\Retro\\Retro.razor",
+      "TargetPath": "Pages\\Retro\\Retro.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Admin\\Source\\Repos\\BlazorApp\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
     }
   ],

@@ -73,6 +73,8 @@ C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\App.razo
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Locked.razor.g.cs
+C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Unauthorized.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Retro\Retro.razor.g.cs
@@ -100,6 +102,8 @@ C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Locked.razor.g.cs
+C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Unauthorized.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\Users\Admin\Source\Repos\BlazorApp\obj\Debug\net5.0\Razor\Pages\Retro\Retro.razor.g.cs

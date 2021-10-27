@@ -5,7 +5,7 @@
 
 <div class="header">
     <h1>Caleb's Crazy Cool Retro Board for Winners</h1>
-    <h4>Good Items: @goodRetros.Count() | Bad Items: @badRetros.Count() | Action Items: @actionItems.Count() </h4>
+    <h4>Good Items: @goodRetros.Items.Count() | Bad Items: @badRetros.Items.Count() | Action Items: @actionItems.Items.Count() </h4>
 </div>
 
 <div class="grid-container">
@@ -16,24 +16,22 @@
 
 @code {
 
-    private List<RetroItem> goodRetros = new();
-    private List<RetroItem> badRetros = new();
-    private List<RetroItem> actionItems = new();
+    private RetroItemCollection goodRetros = new() { Header = "What went Well", HelperText = "What went well?" };
+    private RetroItemCollection badRetros = new() { Header = "What didn't go Well", HelperText = "What didn't go well?" };
+    private RetroItemCollection actionItems = new() { Header = "Action Items", HelperText = "Add an action Item" };
 
     protected override async Task OnInitializedAsync()
     {
-        goodRetros = await RetroBoardService.GetRetroBoardAsync();
-        badRetros = await RetroBoardService.GetRetroBoardAsync();
-        actionItems = await RetroBoardService.GetRetroBoardAsync();
+        goodRetros.Items = await RetroBoardService.GetRetroBoardAsync();
+        badRetros.Items = await RetroBoardService.GetRetroBoardAsync();
+        actionItems.Items = await RetroBoardService.GetRetroBoardAsync();
     }
 
-    //Todo: Add and remove items by Id
     private void AddGoodRetro(string newGoodEntry)
     {
         if (!string.IsNullOrWhiteSpace(newGoodEntry))
         {
-
-            goodRetros.Add(new RetroItem { Text = newGoodEntry, Id = goodRetros.Count() + 1, Author = "Anonymous" });
+            goodRetros.Items.Add(new RetroItem { Text = newGoodEntry, Id = goodRetros.Items.Count() + 1, Author = "Anonymous" });
             newGoodEntry = string.Empty;
         }
     }
@@ -42,7 +40,7 @@
     {
         if (!string.IsNullOrWhiteSpace(newBadEntry))
         {
-            badRetros.Add(new RetroItem { Text = newBadEntry });
+            badRetros.Items.Add(new RetroItem { Text = newBadEntry });
             newBadEntry = string.Empty;
         }
     }
@@ -51,17 +49,14 @@
     {
         if (!string.IsNullOrWhiteSpace(newActionEntry))
         {
-            actionItems.Add(new RetroItem { Text = newActionEntry, Author = "Anonymous" });
+            actionItems.Items.Add(new RetroItem { Text = newActionEntry, Author = "Anonymous" });
             newActionEntry = string.Empty;
         }
     }
-
 
     private void RemoveRetro(RemoveRetroPayload retroToRemove)
     {
         Console.WriteLine("Delete method invoked");
         retroToRemove.TargetList.RemoveAll(item => item.Id == retroToRemove.ItemId);
     }
-
-
 }
